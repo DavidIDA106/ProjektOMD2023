@@ -1,5 +1,7 @@
 package computer;
 
+import data.*;
+
 public class Factorial extends Program {
     public Factorial() {
         Address n = new Address(0),
