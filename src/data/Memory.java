@@ -2,18 +2,18 @@ package data;
 
 public class Memory {
 
-    private Word[] memory;
+    private final Word[] memory;
 
-    public Memory () {
-        //mem = new Word[size];
+    public Memory (int size) {
+        memory = new Word[size];
     }
 
     public Word read (int index) {
         return memory[index];
     }
 
-    public boolean write (int index, Word value) {
+    public void write (int index, Word value) {
         memory[index] = value;
-        return true;
+        //return true;
     }
 }

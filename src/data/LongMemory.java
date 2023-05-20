@@ -5,6 +5,7 @@ public class LongMemory extends Memory {
     private LongWord[] memory;
 
     public LongMemory (int size) {
+        super(size);
         memory = new LongWord[size];
     }
 
@@ -12,8 +13,8 @@ public class LongMemory extends Memory {
         return memory[index];
     }
 
-    public boolean write (int index, LongWord value) {
+    public void write (int index, LongWord value) {
         memory[index] = value;
-        return true;
+        //return true;
     }
 }

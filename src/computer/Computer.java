@@ -1,5 +1,7 @@
 package computer;
 import data.*;
+import instruction.Halt;
+import instruction.Instruction;
 
 public class Computer {
 
@@ -26,5 +28,18 @@ public class Computer {
 
     public void run () {
         reset();
+        Instruction i = null;
+
+        while (pc.getIndex() >= 0) {
+
+            int count = pc.getIndex();
+
+            i = program.instList.get(pc.getIndex());
+            i.exec(memory, pc);
+
+            if (count == pc.getIndex())
+                pc.inc();
+
+        }
     }
 }

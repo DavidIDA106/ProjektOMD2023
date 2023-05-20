@@ -8,6 +8,7 @@ public class Factorial extends Program {
     private Memory mem;
 
     public Factorial() {
+        super();
         Address n = new Address(0),
                 fac = new Address(1);
         add(new Copy(new LongWord(5), n));

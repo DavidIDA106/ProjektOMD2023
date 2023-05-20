@@ -1,14 +1,18 @@
 package computer;
 
+import data.Memory;
 import instruction.Instruction;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Program {
 
-    private List<Instruction> instList;
+    public List<Instruction> instList;
 
-    public Program () {};
+    public Program () {
+        instList = new ArrayList<Instruction>();
+    };
 
     public boolean add (Instruction i) {
         instList.add(i);
