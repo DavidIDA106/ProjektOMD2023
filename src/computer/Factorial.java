@@ -4,6 +4,9 @@ import data.*;
 import instruction.*;
 
 public class Factorial extends Program {
+
+    private Memory mem;
+
     public Factorial() {
         Address n = new Address(0),
                 fac = new Address(1);
