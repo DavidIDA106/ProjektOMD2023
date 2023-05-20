@@ -1,6 +1,7 @@
 package computer;
 
 import data.*;
+import instruction.*;
 
 public class Factorial extends Program {
     public Factorial() {

@@ -12,12 +12,11 @@ public class Computer {
         memory = mem;
     }
 
-    public boolean load (Program prg) {
+    public void load (Program prg) {
         program = prg;
-        return true;
     }
 
-    public boolean run () {
-        return true;
+    public void run () {
+        program.reset();
     }
 }
