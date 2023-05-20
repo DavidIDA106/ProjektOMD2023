@@ -1,21 +1,21 @@
 package data;
 
-public abstract class Word <T extends Number> implements Data {
+public abstract class Word implements Data {
 
-    T word;
+    int word;
 
     public Word () {
     }
 
-    public Word (T value) {
+    public Word (int value) {
         word = value;
     }
 
-    public T get () {
+    public Number get () {
         return word;
     }
 
-    public void set (T value) {
+    public void set (int value) {
         word = value;
     }
 }

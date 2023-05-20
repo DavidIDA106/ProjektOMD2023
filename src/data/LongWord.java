@@ -1,22 +1,23 @@
 package data;
 
-public class LongWord extends Word <Long> {
+public class LongWord extends Word {
 
-    Long word;
+    long word;
 
     public LongWord () {
         word = 0L;
     }
 
-    public LongWord (Long value) {
+    public LongWord (long value) {
         word = value;
     }
 
+    @Override
     public Long get () {
         return word;
     }
 
-    public void set (Long value) {
+    public void set (long value) {
         word = value;
     }
 
