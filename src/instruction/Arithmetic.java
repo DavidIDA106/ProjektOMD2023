@@ -21,22 +21,6 @@ public abstract class Arithmetic implements Instruction {
         out = n;
     }
 
-//    public Arithmetic (Word o1, Word o2, Address n) {
-//
-//    }
-//
-//    public Arithmetic (Word o1, Address o2, Address n) {
-//
-//    }
-//
-//    public Arithmetic (Address o1, Word o2, Address n) {
-//
-//    }
-//
-//    public Arithmetic (Address o1, Address o2, Address n) {
-//
-//    }
-
     public void exec (Memory m, ProgramCounter pc) {
 
         if (op1 instanceof Address) {

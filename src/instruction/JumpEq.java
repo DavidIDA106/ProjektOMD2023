@@ -21,22 +21,6 @@ public class JumpEq implements Instruction {
         op2 = o2;
     }
 
-//    public JumpEq (int n, Word o1, Word o2) {
-//
-//    }
-//
-//    public JumpEq (int n, Word o1, Address o2) {
-//
-//    }
-//
-//    public JumpEq (int n, Address o1, Word o2) {
-//
-//    }
-//
-//    public JumpEq (int n, Address o1, Address o2) {
-//
-//    }
-
     public void exec (Memory m, ProgramCounter pc) {
 
         Word n1 = null;

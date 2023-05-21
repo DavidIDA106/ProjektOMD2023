@@ -10,10 +10,6 @@ public class Address {
         index = ind;
     }
 
-//    public int getIndex() {
-//        return index;
-//    }
-
     public String toString() {
         return "[" + index + "]";
     }
