@@ -1,23 +1,10 @@
 package data;
 
-public abstract class Memory {
+public interface Memory {
 
-    protected final Word[] memory;
+    //final Word[] memory = new Word[0];
 
-    public Memory (Word[] memory) {
-        this.memory = memory;
-    }
+    public Word read (int index);
 
-    public Memory (int size) {
-        memory = new Word[size];
-    }
-
-    public Word read (int index) {
-        return memory[index];
-    }
-
-    public void write (int index, Word value) {
-        memory[index] = value;
-        //return true;
-    }
+    public void write (int index, Word value);
 }

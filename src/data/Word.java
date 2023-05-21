@@ -1,18 +1,11 @@
 package data;
 
-public abstract class Word implements Data {
+public interface Word {
 
-    public final Number word;
+
 //
-    public Word (int value) {
-        word = value;
-    }
 
-    protected Word() {
-        word = 0;
-    }
-
-//    public Number get () {
+    //    public Number get () {
 //        return word;
 //    }
 
@@ -20,7 +13,7 @@ public abstract class Word implements Data {
     //    word = value;
     //}
 
-    public boolean equals (Word w) {
-        return word.equals(w.word);
-    }
+    public boolean equals (Word w);
+
+    public Number get ();
 }

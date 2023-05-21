@@ -1,6 +1,6 @@
 package data;
 
-public class LongWord extends Word {
+public class LongWord implements Word {
 
     public final Long word;
 
@@ -22,6 +22,10 @@ public class LongWord extends Word {
 //    }
 
     public boolean equals (Word w) {
-        return word.equals(w.word);
+        return word.equals(w.get());
+    }
+
+    public Number get () {
+        return word;
     }
 }

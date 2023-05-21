@@ -1,20 +1,19 @@
 package data;
 
-public class LongMemory extends Memory {
+public class LongMemory implements Memory {
 
     private LongWord[] memory;
 
     public LongMemory (int size) {
 
-        super(new LongWord[size]);
+        memory = new LongWord[size];
     }
 
     public LongWord read (int index) {
-        return (LongWord) super.memory[index];
+        return memory[index];
     }
 
-    public void write (int index, LongWord value) {
-        super.memory[index] = value;
-        //return true;
+    public void write (int index, Word value) {
+        memory[index] = (LongWord)value;
     }
 }

@@ -4,6 +4,7 @@ import computer.ProgramCounter;
 import data.Address;
 import data.LongWord;
 import data.Memory;
+import data.Word;
 
 public class Add extends Arithmetic {
 
@@ -12,17 +13,27 @@ public class Add extends Arithmetic {
     }
 
     public void exec (Memory m, ProgramCounter pc) {
+
+        Word n1 = null;
+        Word n2 = null;
+
         if (op1 instanceof Address) {
             Address o1 = (Address)op1;
-            op1 = new LongWord(m.read(o1.index).word.longValue());
+            n1 = new LongWord(m.read(o1.index).get().longValue());
+        }
+        else {
+            n1 = (Word) op1;
         }
 
         if (op2 instanceof Address) {
             Address o2 = (Address)op2;
-            op2 = new LongWord(m.read(o2.index).word.longValue());
+            n2 = new LongWord(m.read(o2.index).get().longValue());
+        }
+        else {
+            n2 = (Word) op2;
         }
 
-        m.write(out.index, new LongWord(calc( (((LongWord)op1).word) , ((LongWord)op2).word)));
+        m.write(out.index, new LongWord(calc( n1.get().longValue(), n2.get().longValue() )));
     }
 
     private long calc (long o1, long o2) {

@@ -42,23 +42,9 @@ public class JumpEq implements Instruction {
         Word n1 = null;
         Word n2 = null;
 
-//        if (op1 instanceof Word) {
-//            o1 = ((Word) op1).word;
-//        }
-//        else {
-//            o1 = m.read(((Address)op1).index).word;
-//        }
-//
-//        if (op2 instanceof Word) {
-//            o2 = ((Word) op2).word;
-//        }
-//        else {
-//            o2 = m.read(((Address)op2).index).word;
-//        }
-
         if (op1 instanceof Address) {
             Address o1 = (Address)op1;
-            n1 = new LongWord(m.read(o1.index).word.longValue());
+            n1 = new LongWord(m.read(o1.index).get().longValue());
         }
         else {
             n1 = (Word) op1;
@@ -66,7 +52,7 @@ public class JumpEq implements Instruction {
 
         if (op2 instanceof Address) {
             Address o2 = (Address)op2;
-            n2 = new LongWord(m.read(o2.index).word.longValue());
+            n2 = new LongWord(m.read(o2.index).get().longValue());
         }
         else {
             n2 = (Word) op2;

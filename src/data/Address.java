@@ -1,6 +1,6 @@
 package data;
 
-public class Address implements Data {
+public class Address {
 
     private Memory mem;
 
