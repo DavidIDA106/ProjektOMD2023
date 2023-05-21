@@ -37,10 +37,6 @@ public class Add extends Arithmetic {
         m.write(out.index, n1.copyAdd(n2.get()));
     }
 
-    private long calc (long o1, long o2) {
-        return o1 + o2;
-    }
-
     public String toString() {
         return "ADD " + op1.toString() + " " + op2.toString();
     }

@@ -35,10 +35,6 @@ public class Mul extends Arithmetic {
         m.write(out.index, n1.copyMul(n2.get()));
     }
 
-    public long calc (long o1, long o2) {
-        return o1*o2;
-    }
-
     public String toString() {
         return "MUL " + op1.toString() + " " + op2.toString();
     }
