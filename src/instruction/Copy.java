@@ -24,4 +24,8 @@ public class Copy implements Instruction {
             m.write(out.index, m.read(((Address)in).index));
         }
     }
+
+    public String toString() {
+        return "CPY " + in.toString() + " " + out.toString();
+    }
 }

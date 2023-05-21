@@ -10,4 +10,6 @@ public interface Instruction {
 
     public void exec(Memory m, ProgramCounter pc);
 
+    public String toString();
+
 }

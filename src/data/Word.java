@@ -16,4 +16,6 @@ public interface Word {
     public boolean equals (Word w);
 
     public Number get ();
+
+    public String toString();
 }

@@ -62,4 +62,8 @@ public class JumpEq implements Instruction {
             pc.setIndex(toIndex);
         }
     }
+
+    public String toString() {
+        return "JEQ " + toIndex + " " + op1.toString() + " " + op2.toString();
+    }
 }

@@ -28,6 +28,12 @@ public class Computer {
 
     public void run () {
         reset();
+
+        for (int i = 0; i < program.instList.size(); i++) {
+            System.out.println(i + " " + program.instList.get(i).toString());
+        }
+        System.out.println();
+
         Instruction i = null;
 
         while (pc.getIndex() >= 0) {

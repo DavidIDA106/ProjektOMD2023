@@ -28,4 +28,8 @@ public class LongWord implements Word {
     public Number get () {
         return word;
     }
+
+    public String toString() {
+        return "" + word;
+    }
 }

@@ -13,4 +13,8 @@ public class Address {
 //    public int getIndex() {
 //        return index;
 //    }
+
+    public String toString() {
+        return "[" + index + "]";
+    }
 }

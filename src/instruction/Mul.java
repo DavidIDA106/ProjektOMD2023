@@ -39,4 +39,8 @@ public class Mul extends Arithmetic {
     public long calc (long o1, long o2) {
         return o1*o2;
     }
+
+    public String toString() {
+        return "MUL " + op1.toString() + " " + op2.toString();
+    }
 }

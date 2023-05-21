@@ -12,4 +12,8 @@ public class Halt implements Instruction {
     public void exec (Memory mem, ProgramCounter pc) {
         pc.setIndex(-1);
     }
+
+    public String toString() {
+        return "HLT ";
+    }
 }

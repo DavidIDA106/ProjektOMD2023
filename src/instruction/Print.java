@@ -15,4 +15,8 @@ public class Print implements Instruction {
     public void exec (Memory m, ProgramCounter pc) {
         System.out.println(m.read(n.index).get());
     }
+
+    public String toString() {
+        return "PRT " + n.toString();
+    }
 }

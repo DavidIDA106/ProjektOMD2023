@@ -16,4 +16,8 @@ public class Jump implements Instruction {
 
         pc.setIndex(toIndex);
     }
+
+    public String toString() {
+        return "JMP " + toIndex;
+    }
 }
