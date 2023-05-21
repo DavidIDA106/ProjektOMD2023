@@ -12,8 +12,8 @@ public class LongWord implements Word {
         word = value;
     }
 
-    public void set (long value) {
-        word = value;
+    public void set (Number value) {
+        word = value.longValue();
     }
 
     public boolean equals (Word w) {
@@ -22,6 +22,14 @@ public class LongWord implements Word {
 
     public Number get () {
         return word.longValue();
+    }
+
+    public void add (Number n) {
+        set(word + n.longValue());
+    }
+
+    public void mul (Number n) {
+        set(word * n.longValue());
     }
 
     public String toString() {

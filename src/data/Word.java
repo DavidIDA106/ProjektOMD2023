@@ -8,5 +8,9 @@ public interface Word {
 
     public Number get ();
 
+    public void add (Number n);
+
+    public void mul (Number n);
+
     public String toString();
 }
