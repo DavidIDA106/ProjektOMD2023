@@ -33,9 +33,6 @@ public class Add extends Arithmetic {
             n2 = (Word) op2;
         }
 
-        //m.write(out.index, new LongWord(calc( n1.get().longValue(), n2.get().longValue() )));
-        //m.write(out.index, m.read(out.index).set(calc(n1.get()));)
-
         m.read(out.index).add(n2.get());
     }
 

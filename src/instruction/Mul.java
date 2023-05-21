@@ -33,7 +33,6 @@ public class Mul extends Arithmetic {
             n2 = (Word) op2;
         }
 
-        //m.write(out.index, new LongWord(calc( n1.get().longValue(), n2.get().longValue() )));
         m.read(out.index).mul(n2.get());
     }
 
