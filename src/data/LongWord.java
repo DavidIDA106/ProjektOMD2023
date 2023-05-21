@@ -24,12 +24,24 @@ public class LongWord implements Word {
         return word.longValue();
     }
 
+    public LongWord copy () {
+        return new LongWord(word);
+    }
+
     public void add (Number n) {
         set(word + n.longValue());
     }
 
     public void mul (Number n) {
         set(word * n.longValue());
+    }
+
+    public LongWord copyAdd (Number n) {
+        return new LongWord(word + n.longValue());
+    }
+
+    public LongWord copyMul (Number n) {
+        return new LongWord(word * n.longValue());
     }
 
     public String toString() {

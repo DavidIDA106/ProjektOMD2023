@@ -2,15 +2,21 @@ package data;
 
 public interface Word {
 
-    public void set (Number value);
+    void set (Number value);
 
-    public boolean equals (Word w);
+    boolean equals (Word w);
 
-    public Number get ();
+    Number get ();
 
-    public void add (Number n);
+    Word copy ();
 
-    public void mul (Number n);
+    void add (Number n);
 
-    public String toString();
+    void mul (Number n);
+
+    Word copyAdd (Number n);
+
+    Word copyMul (Number n);
+
+    String toString();
 }

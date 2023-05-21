@@ -33,7 +33,8 @@ public class Add extends Arithmetic {
             n2 = (Word) op2;
         }
 
-        m.read(out.index).add(n2.get());
+        //m.read(out.index).add(n2.get());
+        m.write(out.index, n1.copyAdd(n2.get()));
     }
 
     private long calc (long o1, long o2) {

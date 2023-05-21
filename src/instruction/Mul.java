@@ -2,7 +2,6 @@ package instruction;
 
 import computer.ProgramCounter;
 import data.Address;
-import data.LongWord;
 import data.Memory;
 import data.Word;
 
@@ -33,7 +32,7 @@ public class Mul extends Arithmetic {
             n2 = (Word) op2;
         }
 
-        m.read(out.index).mul(n2.get());
+        m.write(out.index, n1.copyMul(n2.get()));
     }
 
     public long calc (long o1, long o2) {

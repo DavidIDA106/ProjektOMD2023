@@ -2,17 +2,16 @@ package instruction;
 
 import computer.ProgramCounter;
 import data.Address;
-import data.LongWord;
 import data.Memory;
 import data.Word;
 
 public class JumpEq implements Instruction {
 
-    private int toIndex;
+    private final int toIndex;
 
-    private Object op1;
+    private final Object op1;
 
-    private Object op2;
+    private final Object op2;
 
     public JumpEq (int n, Object o1, Object o2) {
 
