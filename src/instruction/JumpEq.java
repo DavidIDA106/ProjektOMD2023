@@ -21,10 +21,26 @@ public class JumpEq implements Instruction {
         op2 = o2;
     }
 
+//    public JumpEq (int n, Word o1, Word o2) {
+//
+//    }
+//
+//    public JumpEq (int n, Word o1, Address o2) {
+//
+//    }
+//
+//    public JumpEq (int n, Address o1, Word o2) {
+//
+//    }
+//
+//    public JumpEq (int n, Address o1, Address o2) {
+//
+//    }
+
     public void exec (Memory m, ProgramCounter pc) {
 
-        Number n1;
-        Number n2;
+        Word n1 = null;
+        Word n2 = null;
 
 //        if (op1 instanceof Word) {
 //            o1 = ((Word) op1).word;
@@ -42,15 +58,21 @@ public class JumpEq implements Instruction {
 
         if (op1 instanceof Address) {
             Address o1 = (Address)op1;
-            op1 = new LongWord(m.read(o1.index).word);
+            n1 = new LongWord(m.read(o1.index).word.longValue());
+        }
+        else {
+            n1 = (Word) op1;
         }
 
         if (op2 instanceof Address) {
             Address o2 = (Address)op2;
-            op2 = new LongWord(m.read(o2.index).word);
+            n2 = new LongWord(m.read(o2.index).word.longValue());
+        }
+        else {
+            n2 = (Word) op2;
         }
 
-        if (((Word)op1).word == ((Word)op2).word) {
+        if ( n1.equals(n2) ) {
             pc.setIndex(toIndex);
         }
     }

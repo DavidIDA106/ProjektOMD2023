@@ -2,7 +2,7 @@ package data;
 
 public class LongWord extends Word {
 
-    public final long word;
+    public final Long word;
 
 //    public LongWord () {
 //        word = 0L;
@@ -21,4 +21,7 @@ public class LongWord extends Word {
 //        word = value;
 //    }
 
+    public boolean equals (Word w) {
+        return word.equals(w.word);
+    }
 }

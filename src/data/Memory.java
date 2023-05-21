@@ -1,8 +1,12 @@
 package data;
 
-public class Memory {
+public abstract class Memory {
 
-    private final Word[] memory;
+    protected final Word[] memory;
+
+    public Memory (Word[] memory) {
+        this.memory = memory;
+    }
 
     public Memory (int size) {
         memory = new Word[size];

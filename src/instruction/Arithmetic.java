@@ -21,16 +21,32 @@ public abstract class Arithmetic implements Instruction {
         out = n;
     }
 
+    public Arithmetic (Word o1, Word o2, Address n) {
+
+    }
+
+    public Arithmetic (Word o1, Address o2, Address n) {
+
+    }
+
+    public Arithmetic (Address o1, Word o2, Address n) {
+
+    }
+
+    public Arithmetic (Address o1, Address o2, Address n) {
+
+    }
+
     public void exec (Memory m, ProgramCounter pc) {
 
         if (op1 instanceof Address) {
             Address o1 = (Address)op1;
-            op1 = new LongWord(m.read(o1.index).word);
+            op1 = new LongWord(m.read(o1.index).word.longValue());
         }
 
         if (op2 instanceof Address) {
             Address o2 = (Address)op2;
-            op2 = new LongWord(m.read(o2.index).word);
+            op2 = new LongWord(m.read(o2.index).word.longValue());
         }
 
         m.write(out.index, new LongWord(calc( (((LongWord)op1).word) , ((LongWord)op2).word)));

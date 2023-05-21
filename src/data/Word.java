@@ -2,7 +2,7 @@ package data;
 
 public abstract class Word implements Data {
 
-    public final int word;
+    public final Number word;
 //
     public Word (int value) {
         word = value;
@@ -19,4 +19,8 @@ public abstract class Word implements Data {
     //public void set (int value) {
     //    word = value;
     //}
+
+    public boolean equals (Word w) {
+        return word.equals(w.word);
+    }
 }
